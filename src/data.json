@@ -1,0 +1,76 @@
+
+
+{
+    "users": [
+            
+        {
+            "id":1,
+            "name":"Stef Patrascan",
+            "dateOfBirth":"27/12/1997",
+            "city":"Strasbourg",
+            "lastWorkPlace":"Calliope",
+            "dateApplied":"14/03/2022",
+            "applicationPhase":"trial"
+        },
+
+        {
+            "id":2,
+            "name":"Peter Jahn",
+            "dateOfBirth":"6/01/1998",
+            "city":"Berlin",
+            "lastWorkPlace":"",
+            "dateApplied":"19/03/2022",
+            "applicationPhase":"interview"
+        },
+
+        {
+            "id":3,
+            "name":"Jean Martin",
+            "dateOfBirth":"25/11/1988",
+            "city":"Paris",
+            "lastWorkPlace":"BNP ParisBas",
+            "dateApplied":"01/03/2022",
+            "applicationPhase":"interview"
+        },
+        {
+            "id":4,
+            "name":"Eric Lebrun",
+            "dateOfBirth":"27/07/1977",
+            "city":"Nantes",
+            "lastWorkPlace":"Titanium",
+            "dateApplied":"19/03/2022",
+            "applicationPhase":"applied"
+        },
+        {
+            "id":5,
+            "name":"Katie Black",
+            "dateOfBirth":"28/02/1984",
+            "city":"Paris",
+            "lastWorkPlace":"Cafe du coin",
+            "dateApplied":"19/03/2022",
+            "applicationPhase":"applied"
+        }
+
+    ],
+
+    "phases":[
+        {
+            "name":"applied",
+            "id":1
+        },
+        {
+            "name":"interview",
+            "id":2
+        },
+        {
+            "name":"trial",
+            "id":3
+        }
+
+
+
+    ]
+
+
+}
+
