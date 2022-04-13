@@ -13,7 +13,6 @@ const UserCard = ({userInfo}) => {
     const [bgColor, setbgColor] = useState("white");
     const [borderLine, setBorderLine] = useState("");
   
-  
     const changeOver = () => {
       setShadow("#290323")
       setbgColor("#f5f5f5")
@@ -27,11 +26,8 @@ const UserCard = ({userInfo}) => {
     }
 
     const checkProp = (prop) => {
-
         return ((prop=="")? "unknown": prop);
-        
     }
-
     return(
         <Card
             sx={{ maxWidth: 345, color: shadow, border: "3px",backgroundColor:bgColor}}
@@ -60,11 +56,7 @@ const UserCard = ({userInfo}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button 
-                    size="small" 
-               > 
-                    Edit 
-                </Button>
+                <Button size="small"> Edit </Button>
             </CardActions>
         </Card>
     );

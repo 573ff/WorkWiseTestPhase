@@ -13,6 +13,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const CreateModal = ({type,closeModal,addPhase,addApplicant}) => {
 
  
+    
     const [phaseTitle, setPhaseTitle] = useState("");
     const handlePhaseTitle = (event) => {
         setPhaseTitle(event.target.value);

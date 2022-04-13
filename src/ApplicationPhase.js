@@ -64,12 +64,13 @@ const ApplicationPhase = ({type}) => {
                 })
             }
 
-            {(isCreateUserModalOpen)? 
-					<CreateModal 
-						type="applicant"
-						closeModal = {handleCloseCreateUserModal} 
-						addApplicant = {addNewApplicant} /> : null}
- 
+                {(isCreateUserModalOpen)? 
+                    <CreateModal 
+                        type="applicant"
+                        closeModal = {handleCloseCreateUserModal} 
+                        addApplicant = {addNewApplicant} 
+                    /> : null
+                }
 
             </Grid>
 
