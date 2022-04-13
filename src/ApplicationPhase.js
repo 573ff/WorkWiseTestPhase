@@ -12,21 +12,6 @@ const ApplicationPhase = ({type}) => {
     const [userId,setUserId] = useState(data.users.length);
 
     const [allUsers,setAllUsers] = useState(data.users);
-    const appliedUsers = [];
-    const interviewUsers = [];
-    const trialDayUsers = [];
-
-    allUsers.map(e => {
-        if(e.applicationPhase == "applied"){
-            appliedUsers.push(e);
-        }
-        else if(e.applicationPhase == "interview"){
-            interviewUsers.push(e);
-        }
-        else if(e.applicationPhase == "trial"){
-            trialDayUsers.push(e);
-        } 
-    });
     
 	const [isCreateUserModalOpen,setIsCreateUserModalOpen] = useState(false);
 
@@ -55,9 +40,6 @@ const ApplicationPhase = ({type}) => {
             },    
         )
 
-        console.log("uinfo in application phase",userInfo);
-        console.log("allusers=",allUsers);
-
 	}
     
     return(
@@ -72,35 +54,14 @@ const ApplicationPhase = ({type}) => {
                 alignItems="stretch"
             >   
         
-            {(type == "applied")?
-                appliedUsers.map((e)=> {
-                    return(
-                        <UserCard key = {e.id} userInfo = {e} />
-                    )
+            {
+                allUsers.map(e => {
+                    if(e.applicationPhase==type){
+                        return(
+                            <UserCard key = {e.id} userInfo = {e} />
+                        )
+                    }
                 })
-                :null
-            }
-
-
-
-            {(type == "interview")?
-                interviewUsers.map((e)=> {
-                    return(
-                        <UserCard key = {e.id} userInfo = {e} />
-                    )
-                })
-                :null
-            }
-
-
-
-            {(type == "trial")?
-                trialDayUsers.map((e)=> {
-                    return(
-                        <UserCard key = {e.id} userInfo = {e} />
-                    )
-                })
-                :null
             }
 
             {(isCreateUserModalOpen)? 
